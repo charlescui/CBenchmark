@@ -1,0 +1,89 @@
+msgid  ""
+msgstr ""
+"Project-Id-Version: libsmtp-- 0.1.0\n"
+"POT-Creation-Date: 2003-09-17 08:29+0100\n"
+"PO-Revision-Date: 2003-09-17 08:29+0100\n"
+"Last-Translator: Vitaly Ovchinnikov <ov@rbcmail.ru>\n"
+"Language-Team: Russian <ov@rbcmail.ru>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=KOI8-R\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid  "A non-recoverable name server error occurred."
+msgstr "Неисправимая ошибка сервера имен."
+
+msgid  "A plugin named ╩$0╚ cannot be found."
+msgstr "Плагин ╩$0╚ не найден."
+
+msgid  "A plugin named ╩$0╚ is already loaded."
+msgstr "Плагин ╩$0╚ уже загружен."
+
+msgid  "A temporary error occurred on an authoritative name server."
+msgstr "Временная ошибка на авторизованном сервере имен."
+
+msgid  "Authentication method ╩$0╚ is not supported by server."
+msgstr "Метод авторизации ╩$0╚ не поддерживается сервером."
+
+msgid  "Error loading shared object ╩$0╚"
+msgstr "Невозможно загрузить объект ╩$0╚"
+
+msgid  "Error loading shared object ╩$0╚ - $1."
+msgstr "Невозможно загрузить объект ╩$0╚: $1"
+
+msgid  "Error opening ╩$0╚ - $1"
+msgstr "Ошибка открытия ╩$0╚: $1"
+
+msgid  "No plugin loaded for ╩$0╚"
+msgstr "Плагин для ╩$0╚ не загружен."
+
+msgid  "No valid recipient was given."
+msgstr "Получатели не указаны."
+
+msgid  "Registering plugin ╩$0╚"
+msgstr "Регистрирую плагин ╩$0╚"
+
+msgid  "Socket is closed."
+msgstr "Сокет закрыт."
+
+msgid  "Socket timeout."
+msgstr "Истекло время ожидания для сокета."
+
+msgid  "[SSLNFO] ============================"
+msgstr "[SSLNFO] ==============================="
+
+msgid  "[SSLNFO] server certificate - issuer:"
+msgstr "[SSLNFO] сертификат сервера - issuer:"
+
+msgid  "[SSLNFO] ============================="
+msgstr "[SSLNFO] ============================"
+
+msgid  "[SSLNFO] server certificate - subject:"
+msgstr "[SSLNFO] сертификат сервера - subject:"
+
+msgid  "[SSLNFO] SSL connection using $0"
+msgstr "[SSLNFO] SSL-подключение с использованием $0"
+
+msgid  "The decryption failed."
+msgstr "Ошибка раскодирования."
+
+msgid  "The file ╩$0╚ does not exist."
+msgstr "Файл ╩$0╚ не существует."
+
+msgid  "The file ╩$0╚ is not readable."
+msgstr "Невозможно прочитать Файл ╩$0╚."
+
+msgid  "The requested name is valid but does not have an IP address."
+msgstr "Имя хоста корректно, но не имеет IP-адреса."
+
+msgid  "The specified host is unknown."
+msgstr "Указаный хост не найден."
+
+msgid  "Unknown message - ╩$0╚"
+msgstr "Неизвестное сообщение: ╩$0╚"
+
+msgid  "Invalid CRAM-MD5 challenge received."
+msgstr "Получен неверный CRAM-MD5 Challenge."
+
+msgid  "Invalid CRAM-SHA1 challenge received."
+msgstr "Получен неверный CRAM-SHA1 Challenge."
+

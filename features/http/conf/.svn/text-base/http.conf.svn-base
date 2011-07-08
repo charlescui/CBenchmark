@@ -1,0 +1,16 @@
+/*
+	http.conf json
+	注意被压的网站keep-alive支持的访问次数
+	从而选择http_xxx_act()的实现策略
+	如果压力机性能好并且有足够权限获得句柄和端口资源
+	那么也可以不使用keep-alive
+	而是:
+	(connect->send->read->free)*N
+*/
+
+{
+	/*"url":"http://localhost:4567/",*/
+	"url":"http://163.com",
+	"method":"GET",
+	"cookie-clean":"TRUE"
+}

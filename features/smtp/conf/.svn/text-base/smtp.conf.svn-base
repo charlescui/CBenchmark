@@ -1,0 +1,14 @@
+/*	smtp.conf	*/
+
+{
+	"URL":"smtp.yeah.net",
+	"PORT":"25",
+	"USER":"cbtest@yeah.net",
+	"PASSWORD":"yijiushiwo",
+	"TO":"zheng.cuizh@gmail.com,zheng.cuizh@alibaba-inc.com",
+	/*"CC":"test1@sample.com",*/
+	/*"BCC":"test2@sample.com",*/
+	"FROM":"cbtest@yeah.net",
+	/*"SUBJECT":"",*/
+	"CONTENT":"To: zheng.cuizh@gmail.com\nBcc: zheng.cuizh@alibaba-inc.com\nSubject: CBenchmark Mail Feature\n\n\nHello from CharlesCui.\nCC and Bcc should be both in rcpts[] and envelope header!\n"
+}

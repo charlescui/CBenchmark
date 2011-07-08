@@ -1,0 +1,19 @@
+libsmtp-- and thread safety
+===========================
+
+libsmtp-- is not thread safe, nor will it be ever be. 
+
+libsmtp-- is designed for simplicity, design and ease of use. It 
+is not meant to be used in any high loaded production software 
+like email servers (of course), but it is meant to be useful if you 
+want to add SMTP features to your software or if you are writing 
+some sort of email client. In such a software project the libsmtp--
+functions are not excessively called, exactly then when you want to
+send an email message, and so there will be no big performance loss
+if you syncronize your threads when you use the libsmtp-- functions.
+
+If you have a good reason why to make libsmtp-- nevertheless thread 
+safe, do not hesitate to message me. Maybe you can convince me :-)
+
+Timo Benk <t_benk@web.de>
+

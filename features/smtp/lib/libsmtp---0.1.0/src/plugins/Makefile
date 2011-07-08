@@ -1,0 +1,72 @@
+#  Copyright (C) 2003 Timo Benk t_benk@web.de
+#
+#  This library is free software; you can redistribute it and/or
+#  modify it under the terms of the GNU Lesser General Public
+#  License as published by the Free Software Foundation; either
+#  version 2.1 of the License, or (at your option) any later version.
+#
+#  This library is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+#  Lesser General Public License for more details.
+#
+#  You should have received a copy of the GNU Lesser General Public
+#  License along with this library; if not, write to the
+#  Free Software Foundation, Inc., 59 Temple Place, Suite 330,
+#  Boston, MA  02111-1307 USA
+
+mandir      = ${prefix}/man
+sharedir    = ${prefix}/share
+
+prefix      = /usr/local/libsmtp---0.1.0
+exec_prefix = ${prefix}
+bindir      = $(exec_prefix)/bin
+libdir      = $(exec_prefix)/lib
+includedir  = $(exec_prefix)/include
+
+LIBNAM      = @libnam@
+LIBVER      = @libver@
+LIBEXT      = @libext@
+LIBCOMPAT   = @libcompat@
+CC          = gcc
+CFLAGS      = -g -O0 -pedantic -fno-builtin-log -fPIC -Wall -DPLUGINDIR=\"$(libdir)/libsmtp--/plugins\" -DLOCALEDIR=\"$(sharedir)/locale\" -DTEXTDOMAIN=\"libsmtp--\" -D__USE_SSL_ 
+LDFLAGS     = -shared -L $(prefix)/lib/ -lsmtp--
+LIBS        = 
+INSTALL     = /usr/bin/install -c
+
+NO_SSL_OBJS=
+SSL_OBJS=plg_anonymous.so plg_cram_md5.so plg_cram_sha1.so plg_external.so plg_login.so plg_plain.so
+
+OBJS = $(SSL_OBJS) $(NO_SSL_OBJS)
+
+all: $(OBJS)
+#	strip --remove-section=.note --remove-section=.comment *.so
+
+clean:
+	/bin/rm -f *.o
+	/bin/rm -f *.so
+	/bin/rm -f *.a
+
+plg_anonymous.so:
+	$(CC) $(LIBS) $(CFLAGS) $(LDFLAGS) plg_anonymous.c -o plg_anonymous.so
+
+plg_cram_md5.so:
+	$(CC) $(LIBS) $(CFLAGS) $(LDFLAGS) plg_cram_md5.c  -o plg_cram_md5.so 
+
+plg_cram_sha1.so:
+	$(CC) $(LIBS) $(CFLAGS) $(LDFLAGS) plg_cram_sha1.c -o plg_cram_sha1.so
+
+plg_external.so:
+	$(CC) $(LIBS) $(CFLAGS) $(LDFLAGS) plg_external.c  -o plg_external.so 
+
+plg_login.so:
+	$(CC) $(LIBS) $(CFLAGS) $(LDFLAGS) plg_login.c     -o plg_login.so    
+
+plg_plain.so:
+	$(CC) $(LIBS) $(CFLAGS) $(LDFLAGS) plg_plain.c     -o plg_plain.so    
+
+install: all
+	$(INSTALL) -m 0755 -d $(libdir)/libsmtp--
+	$(INSTALL) -m 0755 -d $(libdir)/libsmtp--/plugins
+	find . -name "*.so" -exec $(INSTALL) -m 0644 {} $(libdir)/libsmtp--/plugins \;
+

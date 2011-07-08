@@ -1,0 +1,89 @@
+msgid  ""
+msgstr ""
+"Project-Id-Version: libsmtp-- 0.1.0\n"
+"POT-Creation-Date: 2003-09-17 08:29+0100\n"
+"PO-Revision-Date: 2003-09-17 08:29+0100\n"
+"Last-Translator: Timo Benk <t_benk@web.de>\n"
+"Language-Team: German <t_benk@web.de>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid  "A non-recoverable name server error occurred."
+msgstr "Ein nicht behebbarer Fehler des Name Servers ist aufgetreten."
+
+msgid  "A plugin named »$0« cannot be found."
+msgstr "Ein Plugin mit dem Namen »$0« konnte nicht gefunden werden."
+
+msgid  "A plugin named »$0« is already loaded."
+msgstr "Ein Plugin mit dem Namen »$0« ist bereits geladen worden."
+
+msgid  "A temporary error occurred on an authoritative name server."
+msgstr "Ein temporärer Fehler des Name Servers ist aufgetreten."
+
+msgid  "Authentication method »$0« is not supported by server."
+msgstr "Die Authentifizierungs Methode »$0« wird nicht unterstützt."
+
+msgid  "Error loading shared object »$0«"
+msgstr "»$0« konnte nicht geladen werden."
+
+msgid  "Error loading shared object »$0« - $1."
+msgstr "»$0« konnte nicht geladen werden: $1"
+
+msgid  "Error opening »$0« - $1"
+msgstr "»$0« konnte nicht geöffnet werden: $1"
+
+msgid  "No plugin loaded for »$0«"
+msgstr "Für »$0« ist kein Plugin registriert worden."
+
+msgid  "No valid recipient was given."
+msgstr "Die Adresse des Empfängers ist ungültig."
+
+msgid  "Registering plugin »$0«"
+msgstr "Registriere Plugin »$0«"
+
+msgid  "Socket is closed."
+msgstr "Die Verbindung ist geschlossen."
+
+msgid  "Socket timeout."
+msgstr "Socket Timeout."
+
+msgid  "[SSLNFO] ============================"
+msgstr "[SSLNFO] ==============================="
+
+msgid  "[SSLNFO] server certificate - issuer:"
+msgstr "[SSLNFO] Server Zertifikat - Aussteller:"
+
+msgid  "[SSLNFO] ============================="
+msgstr "[SSLNFO] ============================"
+
+msgid  "[SSLNFO] server certificate - subject:"
+msgstr "[SSLNFO] Server Zertifikat - Inhaber:"
+
+msgid  "[SSLNFO] SSL connection using $0"
+msgstr "[SSLNFO] SSL Verbindung über $0"
+
+msgid  "The decryption failed."
+msgstr "Die Entschlüsselung ist fehlgeschlagen."
+
+msgid  "The file »$0« does not exist."
+msgstr "Die Datei »$0« existiert nicht."
+
+msgid  "The file »$0« is not readable."
+msgstr "Die Datei »$0« ist nicht lesbar."
+
+msgid  "The requested name is valid but does not have an IP address."
+msgstr "Der Hostname ist gültig, hat aber keine IP Adresse."
+
+msgid  "The specified host is unknown."
+msgstr "Der Hostname konnte nicht aufgelöst werden."
+
+msgid  "Unknown message - »$0«"
+msgstr "Unbekannte Nachricht: »$0«"
+
+msgid  "Invalid CRAM-MD5 challenge received."
+msgstr "Ungültiger CRAM-MD5 Challenge."
+
+msgid  "Invalid CRAM-SHA1 challenge received."
+msgstr "Ungültiger CRAM-SHA1 Challenge."
+

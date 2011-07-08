@@ -1,0 +1,13 @@
+#                                               -*- Autoconf -*-
+# Process this file with autoconf to produce a configure script.
+AC_PREREQ(2.59)
+AC_INIT(CBenchmark, 1.0.0, zheng.cuizh@gmail.com)
+AC_CONFIG_SRCDIR([source/main.c ])
+#AC_CONFIG_HEADER([main.h, cbenchmark.h, cbutils.h, list.h, paramutil.h])
+AM_INIT_AUTOMAKE
+AC_PROG_LIBTOOL
+
+# Checks for programs.
+AC_PROG_CC
+AC_CONFIG_FILES([Makefile])
+AC_OUTPUT

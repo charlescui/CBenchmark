@@ -1,0 +1,11 @@
+Installation notes for MacOS
+============================
+
+You will need macOS 10.2 or above. The default 
+MACOSX_DEPLOYMENT_TARGET is 10.2, if that is
+not what you want set the environment variable
+MACOSX_DEPLOYMENT_TARGET to your deployment target.
+Additionally you will need at least the following 
+packages installed.
+
+libintl - http://macosx.forked.net/p/libintl.pkg.tgz
