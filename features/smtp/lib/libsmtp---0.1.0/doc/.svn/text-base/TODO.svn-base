@@ -1,5 +1,0 @@
-general:
-========
-* more plugins
-* maybe, but only very maybe, libsmtp-- will become thread 
-  safe somewhere in the future
