@@ -45,3 +45,21 @@ TODO:
 
 作者:
 zheng.cuizh@gmail.com
+
+[zheng.cuizh@localhost cbenchmark]$ /usr/local/cbenchmark/bin/cbenchmark -?
+        CharlesCui's Benchmark
+                help you do performance test nice.
+-o ["Shell command"]
+-f [Output result path]
+-F [Dynamic lib path.]
+-n [Each thread iterations times]
+-c [Concurrence NUM]
+-l [Syslog level]
+-g [Syslog name,less than 128 char]
+-v [Show -o stdoutput]
+-t [Selftest]
+-x [Scenario id]
+-T [Timmer(seconds)].
+-s [Select a scenario from list]
+
+
