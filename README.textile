@@ -73,7 +73,9 @@ h2. 使用方法|Usage
 </code></pre>
 
 h2. 作者|Author
+
 gtalk/gmail zheng.cuizh@gmail.com
 
 h2. 用例|Example
+
 to be done.
