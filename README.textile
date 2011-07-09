@@ -1,0 +1,78 @@
+http://cuiz.me/cbenchmark/2011/07/cbenchmarkjieshao/
+
+h1. 介绍：
+	h2. CBenchmark---<b>C</b>harlesCui's Benchmark
+
+本产品是为了解决性能测试压力生成的问题.
+
+h2. 系统|Platform
+
+在对服务端系统进行性能测试时，目前成熟的解决方案是使用windows系统下LoadRunner等系列产品，而无法找到功能强大的Linux系统下的产品。
+本程序目前支持Linux系统，并且理论可以实现跨平台编译（作者并没有实验过，但本产品并没有依赖特定系统的库或者函数）.
+
+h2. 特点|Feature
+
+* 本程序和当前性能测试解决方案相比，
+## 可以实现极高的定制化:开放所有API,用户可以基于这些API实现自己的性能测试工具.
+## 无限制:本产品完全免费，不会像现有成熟解决方案一样基于并发数,或者基于使用协议的Lisense限制。
+## 高性能高并发:可提供比现有产品高出很多的并发能力,本程序使用C语言实现所有的代码。
+## 通用性:由于本产品测试用例的业务实现是由客户完成，所以本产品的作用不限于某种测试协议,所以本产品是一个通用的性能测试工具.
+## 执行过程可控:测试执行过程中用户可以通过Ctrl+C来控制本产品的执行。
+## 特有的测试用例加载模式:对测试用例加载的模式和市面上的性能测试产品都不一样，用户可以将CBenchmark当做第三方库编码进入测试代码,也可以将CBenchmark当做工具,在执行的时候动态加载测试代码以产生压力.
+
+本产品理论支持所有的服务端性能测试。
+对于非标准协议的性能测试，我推荐您使用本产品。
+
+h2. 安装过程
+
+<pre><code>
+./configure --prefix=/opt/cbenchmark
+make
+make install
+</code></pre>
+
+h2. 安装后产生文件 
+
+* 本程序内容如下：
+## bin/cbenchmark
+## include/*.h
+
+h2. TODO
+
+h3. 报表
+
+* 目前本产品提供的测试结果有两种：
+## 执行完毕后的文字提示
+## 执行完毕后的日志
+作者在未来会提供报表生成工具，
+但不会集成在本产品中，这是为了保证本产品的干净，高效。
+并且在没有桌面的linux端使用本产品执行性能测试，
+测试结果的显示手段有限，所以我不建议集成在本工具里。
+而是最好用其他工具实现，这样也可以完成分布式性能测试的图表结果展现。
+
+h2. 使用方法|Usage
+请执行bin/cbenchmark -?
+
+<pre><code>
+[zheng.cuizh@localhost cbenchmark]$ /usr/local/cbenchmark/bin/cbenchmark -?
+        CharlesCui's Benchmark
+                help you do performance test nice.
+-o ["Shell command"]
+-f [Output result path]
+-F [Dynamic lib path.]
+-n [Each thread iterations times]
+-c [Concurrence NUM]
+-l [Syslog level]
+-g [Syslog name,less than 128 char]
+-v [Show -o stdoutput]
+-t [Selftest]
+-x [Scenario id]
+-T [Timmer(seconds)].
+-s [Select a scenario from list]
+</code></pre>
+
+h2. 作者|Author
+gtalk/gmail zheng.cuizh@gmail.com
+
+h2. 用例|Example
+to be done.
