@@ -79,4 +79,35 @@ gtalk/gmail zheng.cuizh@gmail.com
 
 h2. 用例|Example
 
-to be done.
+./features目录下面是测试插件,目前还没有完善,现在只实现了ice的测试demo.因为我一直用cbenchmark测试私有协议以及一部分ice协议,私有协议的测试demo不方便公开,而ice协议的测试demo完全可以给大家借鉴.
+
+h3. ICE测试
+
+如果大家不了解ice,可以在这里学习一下:http://www.zeroc.com/
+demo位于./features/ice下,几乎所有的ice协议测试都可以用这个框架改一改就行.
+
+* ice测试用例的组成
+## main.c 该文件为ice测试用例库的入口程序,根据cbenchmark加载测试用例库的约定,该文件实现了一个initialize函数,该函数可以调度测试的执行,比如提供选择要执行的测试场景等功能,可由用户定制.
+## main.h 该文件包含了cbenchmark的头文件,以及若干工具文件,同时声明了main.c中的函数定义.
+## mos_perf_test.cpp 该文件包含了mos模块ice接口的测试代码,通过将mos_init函数中实现的ice实例:mos传递给pVuser->verb指针,从而可以让真正实现压力请求的函数:mos_getUserStatus,mos_getUserCount得到该对象的引用,以访问checkcast后得到的MOSInterfacePrx对象.注意new的使用.
+## mos_perf_test.h 该文件包含了mos_perf_test.cpp实现的ice连接建立/释放函数(mos_init(),mos_end()),以及测试方法(mos_getUserStatus,mos_getUserCount).
+
+关于main.c
+<pre><code>
+                                pmw->script.init = mos_init;
+                                pmw->script.act = mos_getUserCount;
+                                pmw->script.end = mos_end;
+</code></pre>
+这是测试mos_getUserCount函数的场景.
+
+* 基本的测试思路是:
+## mos_init函数实现初始化,比如ice协议就是建立连接,并将代理类放到堆中并将指针传递给pVuser->verb或者它指向的某个结构,
+## mos_getUserCount函数实现迭代的测试,也就是在测试过程中,CBenchmark会不断执行该函数已产生业务上的请求,
+## mos_end函数实现释放链接操作.
+
+不管怎样的协议的性能测试,思路如出一辙,你只需按照上面的三条完成业务代码的编写,CBenchmark就会帮助你把这个业务逻辑变成高并发高频率的请求,这样会瞬间给服务端带来极大的压力,从而测试服务器的抗压性.
+
+h2. TODO
+
+这个用例是我在测试工作中积累的数十个测试场景里挑选出来的,已经非常的简单了,但要了解cbenchmark的工作原理,还是需要再阅读更多的关于cbenchmark的文档,我会陆续放出.
+
